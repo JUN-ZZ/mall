@@ -8,10 +8,18 @@ import java.sql.SQLException;
 import com.mall.domain.User;
 import com.mall.exception.MsgException;
 import com.mall.util.JDBCUtils;
+import org.springframework.stereotype.Repository;
 
+import javax.annotation.PostConstruct;
+
+@Repository("userDao")
 public class UserDaoImpl implements UserDao {
 
-	
+	@PostConstruct
+	public void init(){
+		System.out.println("autowired");
+	}
+
 	@Override
 	public boolean getUserByUsername(String username) {
 		Connection con = JDBCUtils.getConnection();

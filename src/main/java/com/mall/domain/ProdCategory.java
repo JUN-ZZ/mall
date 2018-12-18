@@ -1,10 +1,13 @@
 package com.mall.domain;
 
+import org.springframework.stereotype.Component;
+
 /**
  * 商品种类
  * @author jun
  *
  */
+@Component
 public class ProdCategory {
 
 	private int id;

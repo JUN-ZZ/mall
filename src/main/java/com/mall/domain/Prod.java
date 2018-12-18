@@ -1,16 +1,21 @@
 package com.mall.domain;
 
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Component;
+
 /**
- * ÉÌÆ·
+ * ï¿½ï¿½Æ·
  * @author jun
  *
  */
+
+@Component
 public class Prod {
 	private int id;
 	private String name;
 	private double price;
 	private int cid;
-	private String cname;// ±£´æÉÌÆ·Ãû³Æ
+	private String cname;// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½
 	private int pnum;
 	private String imgurl;
 	private String description;

@@ -5,7 +5,18 @@
     <file url="file://$PROJECT_DIR$/src/main/java/com/mall/backend/web/AddProdServlet.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/mall/backend/web/ListProdServlet.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/mall/dao/ProdDao.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/mall/dao/ProdDaoImpl.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/mall/domain/Prod.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/mall/domain/ProdCategory.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/mall/filter/AutoLoginFilter.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/mall/filter/EncodingFilter.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/mall/service/ProdService.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/mall/service/ProdServiceImpl.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/mall/util/BaseFactory.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/mall/util/MD5Utils.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/mall/util/TransactionManager.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/mall/util/VerifyCode.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/mall/util/easymall.sql" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/mall/web/LoginServlet.java" charset="GBK" />
   </component>
 </project>

@@ -4,13 +4,20 @@ import com.mall.dao.UserDao;
 import com.mall.domain.User;
 import com.mall.exception.MsgException;
 import com.mall.util.BaseFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service("userService")
 public class UserServiceImpl implements UserService {
 	
-	private UserDao dao =
-	BaseFactory.getFactory().getInstance(UserDao.class);
-	
-	
+//	private UserDao dao =
+//	BaseFactory.getFactory().getInstance(UserDao.class);
+//
+
+	@Autowired
+	private UserDao dao ;
+
+
 	@Override
 	public boolean hasUsername(String username) throws MsgException {
 		// TODO Auto-generated method stub

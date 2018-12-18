@@ -8,11 +8,18 @@ import com.mall.domain.ProdCategory;
 import com.mall.exception.MsgException;
 import com.mall.util.BaseFactory;
 import com.mall.util.TransactionManager;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service("prodService")
 public class ProdServiceImpl implements ProdService {
 	
-	private ProdDao dao = BaseFactory.getFactory().getInstance(ProdDao.class);
-	
+//	private ProdDao dao = BaseFactory.getFactory().getInstance(ProdDao.class);
+
+
+	@Autowired
+	private ProdDao dao ;
+
 	/**
 	 * ÃÌº”…Ã∆∑
 	 */

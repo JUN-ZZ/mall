@@ -22,6 +22,7 @@ import com.mall.service.UserService;
 import com.mall.util.BaseFactory;
 import com.mall.util.JDBCUtils;
 import com.mall.util.MD5Utils;
+import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * Servlet implementation class LoginServlet
@@ -29,46 +30,14 @@ import com.mall.util.MD5Utils;
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
+	@Autowired
+	private UserService userService ;
+
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-//		ServletContext sc = this.getServletContext();
-//		String encode = sc.getInitParameter("encode");
-//		request.setCharacterEncoding(encode);
-//		response.setContentType("text/html;charset="+encode);
-
-//		String password = null;
-//		String username = null;
-//		String remname = request.getParameter("remname");
-//		String autologin = request.getParameter("autologin");
-
-//		//判断有没有自动登录cookie发送过来,有的话直接验证登录//注销的话就毁掉cookie
-//		Cookie[] cs = request.getCookies();
-//		Cookie autologinC = null;
-//		if(cs!=null){
-//			for(Cookie c:cs){
-//				if("remname".equals(c.getName())){
-//					username = URLDecoder.decode(c.getValue(), "utf-8");
-//				}else if("autologin".equals(c.getName())){//拥有自动登录的cookie
-//					autologinC = c;
-//					String s = URLDecoder.decode(c.getValue(), "utf-8");
-//					username = s.split(";")[0];
-//					password = s.split(";")[1];
-//					System.out.println(username);
-//					System.out.println(password);
-//					verifyUser(request,response, username, password);
-//					break;
-//				}
-//			}
-//		}
-//		if(autologinC!=null){
-//			return ;
-//		}
-//		
-		
-		//没有自动登录cookie，获取表单的信息验证
 		String password = request.getParameter("password");
 		String username = request.getParameter("username");
 		String remname = request.getParameter("remname");
@@ -103,13 +72,9 @@ public class LoginServlet extends HttpServlet {
 			response.addCookie(c2);
 		}
 		
-		//对代码进行重构
-//		//进行登录验证
-//		verifyUser( request,response, username, password);
-
-		
 		//mvc 四层架构实现逻辑
-		UserService userService = BaseFactory.getFactory().getInstance(UserService.class);
+//		UserService userService = BaseFactory.getFactory().getInstance(UserService.class);
+
 		User user = null;
 		try {
 			user = userService.login(username, password);

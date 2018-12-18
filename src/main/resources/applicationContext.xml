@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
 
-    <bean id="user" class="com.mall.domain.User"></bean>
+">
+    <!--开启包扫描-->
+    <context:component-scan base-package="com.mall.dao,com.mall.service,com.mall.web" />
+    <!--开启属性注解-->
+    <context:annotation-config></context:annotation-config>
+    <!--<bean id="user" class="com.mall.domain.User"></bean>-->
+
 
 
 

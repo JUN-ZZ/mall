@@ -2,7 +2,9 @@ package com.mall.dao;
 
 import com.mall.domain.User;
 import com.mall.exception.MsgException;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface UserDao {
 
 	/**

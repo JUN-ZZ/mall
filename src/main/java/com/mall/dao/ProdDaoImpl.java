@@ -12,7 +12,10 @@ import com.mall.domain.ProdCategory;
 import com.mall.exception.MsgException;
 import com.mall.util.JDBCUtils;
 import com.mall.util.TransactionManager;
+import org.springframework.stereotype.Repository;
 
+
+@Repository("prodDao")
 public class ProdDaoImpl implements ProdDao {
 
 	@Override

@@ -13,27 +13,27 @@
     <param-name>encode</param-name>
     <param-value>utf-8</param-value>
   </context-param>
-  <filter>
-    <filter-name>EncodingFilter</filter-name>
-    <filter-class>com.mall.filter.EncodingFilter</filter-class>
-  </filter>
-  <filter-mapping>
-    <filter-name>EncodingFilter</filter-name>
-    <url-pattern>/*</url-pattern>
-  </filter-mapping>
-  <filter>
-    <filter-name>AutoLoginFilter</filter-name>
-    <filter-class>com.mall.filter.AutoLoginFilter</filter-class>
-    <init-param>
-      <param-name>init</param-name>
-      <param-value>autologin</param-value>
-    </init-param>
-  </filter>
-  <filter-mapping>
-    <filter-name>AutoLoginFilter</filter-name>
-    <url-pattern>/*</url-pattern>
-    <url-pattern>/LoginServlet</url-pattern>
-  </filter-mapping>
+  <!--<filter>-->
+    <!--<filter-name>EncodingFilter</filter-name>-->
+    <!--<filter-class>com.mall.filter.EncodingFilter</filter-class>-->
+  <!--</filter>-->
+  <!--<filter-mapping>-->
+    <!--<filter-name>EncodingFilter</filter-name>-->
+    <!--<url-pattern>/*</url-pattern>-->
+  <!--</filter-mapping>-->
+  <!--<filter>-->
+    <!--<filter-name>AutoLoginFilter</filter-name>-->
+    <!--<filter-class>com.mall.filter.AutoLoginFilter</filter-class>-->
+    <!--<init-param>-->
+      <!--<param-name>init</param-name>-->
+      <!--<param-value>autologin</param-value>-->
+    <!--</init-param>-->
+  <!--</filter>-->
+  <!--<filter-mapping>-->
+    <!--<filter-name>AutoLoginFilter</filter-name>-->
+    <!--<url-pattern>/*</url-pattern>-->
+    <!--<url-pattern>/LoginServlet</url-pattern>-->
+  <!--</filter-mapping>-->
   <listener>
     <listener-class>com.mall.listener.MyServletContextListener</listener-class>
   </listener>
