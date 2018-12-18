@@ -34,6 +34,20 @@
     <!--<url-pattern>/*</url-pattern>-->
     <!--<url-pattern>/LoginServlet</url-pattern>-->
   <!--</filter-mapping>-->
+
+  <!-- 配置Spring配置文件路径 -->
+  <!--classpath*:applicationContext-shiro.xml-->
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath*:applicationContext.xml
+    </param-value>
+  </context-param>
+  <!-- 配置Spring上下文监听器 -->
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+
+
   <listener>
     <listener-class>com.mall.listener.MyServletContextListener</listener-class>
   </listener>

@@ -13,7 +13,7 @@ public class ApplicationContextTest {
 
         ClassPathXmlApplicationContext context =
                 new ClassPathXmlApplicationContext("applicationContext.xml");
-        User user = context.getBean("user",User.class);
+        User user = context.getBean(User.class);
 
         System.out.println(user);
 
