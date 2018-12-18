@@ -73,7 +73,7 @@ public class LoginServlet extends HttpServlet {
 		}
 		
 		//mvc 四层架构实现逻辑
-//		UserService userService = BaseFactory.getFactory().getInstance(UserService.class);
+		UserService userService = BaseFactory.getFactory().getInstance(UserService.class);
 
 		User user = null;
 		try {
