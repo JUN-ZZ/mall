@@ -17,7 +17,7 @@ public class UserDaoImpl implements UserDao {
 
 	@PostConstruct
 	public void init(){
-		System.out.println("autowired");
+		System.out.println("init bean");
 	}
 
 	@Override

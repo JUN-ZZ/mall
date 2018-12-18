@@ -15,25 +15,26 @@ public class UserServiceImpl implements UserService {
 //
 
 	@Autowired
-	private UserDao dao ;
+	private UserDao userDao ;
 
 
 	@Override
 	public boolean hasUsername(String username) throws MsgException {
 		// TODO Auto-generated method stub
-		return dao.getUserByUsername(username);
+		return userDao.getUserByUsername(username);
 	}
 
 	@Override
 	public boolean registUser(User user) {
 		// TODO Auto-generated method stub
-		return dao.insertUser(user);
+		return userDao.insertUser(user);
 	}
 
 	@Override
 	public User login(String username, String password) throws MsgException {
 		// TODO Auto-generated method stub
-		return dao.getUserByUAP(username, password);
+		System.out.println("userdao"+userDao);
+		return userDao.getUserByUAP(username, password);
 	}
 
 	

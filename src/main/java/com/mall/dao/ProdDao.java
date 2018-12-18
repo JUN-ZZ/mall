@@ -7,7 +7,6 @@ import com.mall.domain.ProdCategory;
 import com.mall.exception.MsgException;
 import org.springframework.stereotype.Repository;
 
-@Repository
 public interface ProdDao {
 	/**
 	 * 根据商品种类名称查询商品种类id的方法

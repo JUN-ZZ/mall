@@ -2,6 +2,7 @@ package com.mall.service;
 
 import com.mall.domain.User;
 import com.mall.exception.MsgException;
+import org.springframework.stereotype.Service;
 
 public interface UserService {
 	/**
