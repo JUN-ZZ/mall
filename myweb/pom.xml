@@ -26,6 +26,98 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
+
+    <!--        &lt;!&ndash; https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+      <version>5.1.3.RELEASE</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-web</artifactId>
+      <version>5.1.3.RELEASE</version>
+    </dependency>
+
+    <!--&lt;!&ndash; https://mvnrepository.com/artifact/org.springframework/spring-context &ndash;&gt;-->
+    <!--&lt;!&ndash;这个是spring的环境配置依赖包&ndash;&gt;-->
+    <!--<dependency>-->
+      <!--<groupId>org.springframework</groupId>-->
+      <!--<artifactId>spring-context</artifactId>-->
+      <!--<version>5.1.3.RELEASE</version>-->
+    <!--</dependency>-->
+    <!--&lt;!&ndash; https://mvnrepository.com/artifact/org.springframework/spring-core &ndash;&gt;-->
+    <!--&lt;!&ndash;spirng的核心包&ndash;&gt;-->
+    <!--<dependency>-->
+      <!--<groupId>org.springframework</groupId>-->
+      <!--<artifactId>spring-core</artifactId>-->
+      <!--<version>5.1.3.RELEASE</version>-->
+    <!--</dependency>-->
+    <!--&lt;!&ndash; https://mvnrepository.com/artifact/org.springframework/spring-beans &ndash;&gt;-->
+    <!--&lt;!&ndash;spring配置bean的依赖包&ndash;&gt;-->
+    <!--<dependency>-->
+      <!--<groupId>org.springframework</groupId>-->
+      <!--<artifactId>spring-beans</artifactId>-->
+      <!--<version>5.1.3.RELEASE</version>-->
+    <!--</dependency>-->
+    <!--&lt;!&ndash; https://mvnrepository.com/artifact/org.springframework/spring-aop &ndash;&gt;-->
+    <!--&lt;!&ndash;这个是xml配置切面的依赖包&ndash;&gt;-->
+    <!--<dependency>-->
+      <!--<groupId>org.springframework</groupId>-->
+      <!--<artifactId>spring-aop</artifactId>-->
+      <!--<version>5.1.3.RELEASE</version>-->
+    <!--</dependency>-->
+    <!--&lt;!&ndash; https://mvnrepository.com/artifact/org.springframework/spring-jdbc &ndash;&gt;-->
+    <!--&lt;!&ndash;spring jdbc依赖包&ndash;&gt;-->
+    <!--<dependency>-->
+      <!--<groupId>org.springframework</groupId>-->
+      <!--<artifactId>spring-jdbc</artifactId>-->
+      <!--<version>5.1.3.RELEASE</version>-->
+    <!--</dependency>-->
+
+    <!--&lt;!&ndash;        &lt;!&ndash; https://mvnrepository.com/artifact/org.springframework/spring-webmvc &ndash;&gt;-->
+    <!--<dependency>-->
+      <!--<groupId>org.springframework</groupId>-->
+      <!--<artifactId>spring-webmvc</artifactId>-->
+      <!--<version>5.1.3.RELEASE</version>-->
+    <!--</dependency>-->
+    <!--&lt;!&ndash; https://mvnrepository.com/artifact/org.springframework/spring-web &ndash;&gt;-->
+    <!--<dependency>-->
+      <!--<groupId>org.springframework</groupId>-->
+      <!--<artifactId>spring-web</artifactId>-->
+      <!--<version>5.1.3.RELEASE</version>-->
+    <!--</dependency>-->
+    <!--&lt;!&ndash; https://mvnrepository.com/artifact/org.springframework/spring-expression &ndash;&gt;-->
+    <!--&lt;!&ndash;这个是springEL表达式依赖包&ndash;&gt;-->
+    <!--<dependency>-->
+      <!--<groupId>org.springframework</groupId>-->
+      <!--<artifactId>spring-expression</artifactId>-->
+      <!--<version>5.1.3.RELEASE</version>-->
+    <!--</dependency>-->
+    <!--&lt;!&ndash; https://mvnrepository.com/artifact/org.springframework/spring-aspects &ndash;&gt;-->
+    <!--&lt;!&ndash;这个是spring切面注解的依赖包&ndash;&gt;-->
+    <!--<dependency>-->
+      <!--<groupId>org.springframework</groupId>-->
+      <!--<artifactId>spring-aspects</artifactId>-->
+      <!--<version>5.1.3.RELEASE</version>-->
+    <!--</dependency>-->
+    <!--&lt;!&ndash; https://mvnrepository.com/artifact/junit/junit &ndash;&gt;-->
+    <!--<dependency>-->
+      <!--<groupId>junit</groupId>-->
+      <!--<artifactId>junit</artifactId>-->
+      <!--<version>4.12</version>-->
+      <!--<scope>test</scope>-->
+    <!--</dependency>-->
+    <!--&lt;!&ndash; https://mvnrepository.com/artifact/org.springframework/spring-tx &ndash;&gt;-->
+    <!--&lt;!&ndash;这个是spring事务依赖包&ndash;&gt;-->
+    <!--<dependency>-->
+      <!--<groupId>org.springframework</groupId>-->
+      <!--<artifactId>spring-tx</artifactId>-->
+      <!--<version>5.1.3.RELEASE</version>-->
+    <!--</dependency>-->
+
+
   </dependencies>
 
   <build>
