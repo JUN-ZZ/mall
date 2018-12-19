@@ -14,7 +14,7 @@ public interface ProdDao {
 	 * @return 商品种类id 或-1
 	 * @throws MsgException
 	 */
-	int getCidByCname(String cname) throws MsgException ;
+	int getCidByCname(String cname) ;
 	/**
 	 * 添加商品种类的方法
 	 * @param pc
@@ -68,6 +68,5 @@ public interface ProdDao {
 	 * @return
 	 */
 	boolean updatePnumByPid(int pid, int pnum);
-	
 	
 }

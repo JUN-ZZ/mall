@@ -32,5 +32,7 @@ public interface ProdService {
 	 * @return true ????? false??????
 	 */
 	boolean updatePnum(int pid, int pnum);
-	
+
+
+	void  say();
 }

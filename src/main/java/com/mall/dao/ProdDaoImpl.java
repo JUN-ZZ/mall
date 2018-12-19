@@ -19,7 +19,7 @@ import org.springframework.stereotype.Repository;
 public class ProdDaoImpl implements ProdDao {
 
 	@Override
-	public int getCidByCname(String cname) throws MsgException {
+	public int getCidByCname(String cname)  {
 		Connection con = null;
 		PreparedStatement ps = null;
 		ResultSet rs = null;
@@ -35,7 +35,6 @@ public class ProdDaoImpl implements ProdDao {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			throw new MsgException("查询cid出现异常");
 		}finally{
 			JDBCUtils.close(null, ps, rs);
 		}
@@ -240,6 +239,7 @@ public class ProdDaoImpl implements ProdDao {
 		}
 		return false;
 	}
-	
-	
+
+
+
 }

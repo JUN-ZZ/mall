@@ -15,11 +15,6 @@ import javax.annotation.PostConstruct;
 @Repository("userDao")
 public class UserDaoImpl implements UserDao {
 
-	@PostConstruct
-	public void init(){
-		System.out.println("init bean");
-	}
-
 	@Override
 	public boolean getUserByUsername(String username) {
 		Connection con = JDBCUtils.getConnection();

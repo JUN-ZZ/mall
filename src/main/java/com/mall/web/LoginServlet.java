@@ -19,10 +19,12 @@ import com.mall.dao.UserDaoImpl;
 import com.mall.domain.User;
 import com.mall.exception.MsgException;
 import com.mall.service.UserService;
+import com.mall.service.UserServiceImpl;
 import com.mall.util.BaseFactory;
 import com.mall.util.JDBCUtils;
 import com.mall.util.MD5Utils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  * Servlet implementation class LoginServlet
@@ -30,8 +32,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	@Autowired
-	private UserService userService ;
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -73,7 +73,11 @@ public class LoginServlet extends HttpServlet {
 		}
 		
 		//mvc 四层架构实现逻辑
-		UserService userService = BaseFactory.getFactory().getInstance(UserService.class);
+//		UserService userService = BaseFactory.getFactory().getInstance(UserService.class);
+		ClassPathXmlApplicationContext context =
+				new ClassPathXmlApplicationContext("classpath:applicationContext.xml");
+		UserService userService = context.getBean("userService", UserServiceImpl.class);
+
 
 		User user = null;
 		try {
