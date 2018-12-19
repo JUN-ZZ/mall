@@ -2,6 +2,7 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/myweb" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/mall/Aspect/TransAspect.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/mall/backend/web/AddProdServlet.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/mall/backend/web/ListProdServlet.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/mall/backend/web/UpdatePnumServlet.java" charset="GBK" />
@@ -21,5 +22,6 @@
     <file url="file://$PROJECT_DIR$/src/main/java/com/mall/util/VerifyCode.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/mall/util/easymall.sql" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/mall/web/LoginServlet.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/test/java/ApplicationContextTest.java" charset="GBK" />
   </component>
 </project>

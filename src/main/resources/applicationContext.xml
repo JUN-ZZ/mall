@@ -14,8 +14,7 @@
 ">
     <!--开启包扫描-->
     <context:component-scan base-package="com.mall.dao,
-    com.mall.service,com.mall.web,
-    com.mall.domain
+    com.mall.service,com.mall.web,com.mall.Aspect,com.mall.domain
 " />
     <!--开启属性注解-->
     <context:annotation-config></context:annotation-config>
@@ -23,6 +22,19 @@
 
     <aop:aspectj-autoproxy />
 
+    <!--jdbc数据源配置-->
+    <context:property-placeholder location="classpath:jdbc.properties" />
+    <!--配置数据源-->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" >
+        <property name="driverClass" value="${driverClass}" />
+        <property name="jdbcUrl" value="${jdbcUrl}" />
+        <property name="user" value="${user}" />
+        <property name="password" value="${password}" />
+    </bean>
+    <!--配置jdbcTemplate模板类-->
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
 
 
 </beans>
