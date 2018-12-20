@@ -3,12 +3,13 @@ package com.spring.controller;
 import com.spring.domain.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 /**
  * @author jun
@@ -16,6 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 
 @Controller
+@SessionAttributes("username")
 public class Demo {
 
 
@@ -40,7 +42,7 @@ public class Demo {
     }
 
     @RequestMapping("/hello2.action")
-    public String hello2( String username, int age, String gender, Model model){
+    public String hello2( @RequestParam(value = "un",required = false) String username, int age, String gender, Model model){
 
         model.addAttribute("username",username);
         model.addAttribute("age",age);
@@ -52,11 +54,73 @@ public class Demo {
 
     @RequestMapping("/hello3")
     public String hello3(User user,Model model){
-
         model.addAttribute("user",user);
 
         return "hello3";
     }
+
+
+    //RESTFul风格的支持
+    @RequestMapping("/hello4/{username}/{age}.action")
+    public String hello4(@PathVariable String username,@PathVariable  int  age, Model model){
+        model.addAttribute("username",username);
+        model.addAttribute("age",age);
+
+        return "hello4";
+    }
+
+
+    @RequestMapping("/hello5.action")
+    public String hello5(){
+        //实现转发
+        return "forward:/hello3.action";
+    }
+
+    @RequestMapping("/hello6.action")
+    public String hello6(){
+        //实现重定向
+        return "redirect:/hello3.action";
+    }
+
+//    实现session作用域的开发
+    @RequestMapping("/hello7.action")
+    public String hello7(String username,Model model){
+        model.addAttribute("username",username);
+
+        //实现重定向
+        return "redirect:/hello3.action";
+    }
+
+
+        @ResponseBody
+        @RequestMapping("/hello8.action")
+        public User hello8(HttpServletResponse response){
+//            自动返回json格式的数据，但是需要导入相应的jar包
+            User user = new User();
+            user.setAge(18);
+            user.setUsername("jun");
+            return user;
+
+    }
+
+
+
+//    常用于Ajax请求
+    @RequestMapping("/hello9.action")
+    public void  hello9(HttpServletResponse response) throws IOException {
+        response.getWriter().write("hello9 ..");
+    }
+
+
+
+    @RequestMapping("/hello10.action")
+    public String hello10(String username,MultipartFile multipartFile ,Model model){
+        System.out.println(username);
+        System.out.println(multipartFile.getOriginalFilename());
+
+        return "hello";
+    }
+
 
 
 }
