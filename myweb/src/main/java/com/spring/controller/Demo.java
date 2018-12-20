@@ -1,6 +1,8 @@
 package com.spring.controller;
 
 import com.spring.domain.User;
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.IOUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -9,7 +11,9 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 
 /**
  * @author jun
@@ -19,7 +23,6 @@ import java.io.IOException;
 @Controller
 @SessionAttributes("username")
 public class Demo {
-
 
     @RequestMapping("/demo.action")
     public String say(Model model){
@@ -88,7 +91,7 @@ public class Demo {
         model.addAttribute("username",username);
 
         //实现重定向
-        return "redirect:/hello3.action";
+        return "redirect:/hello3.action?username='军'";
     }
 
 
@@ -112,11 +115,18 @@ public class Demo {
     }
 
 
-
+//    表单文件上传
     @RequestMapping("/hello10.action")
-    public String hello10(String username,MultipartFile multipartFile ,Model model){
+    public String hello10(String username,@RequestParam(value = "tupian") MultipartFile multipartFile ,Model model) throws IOException {
         System.out.println(username);
         System.out.println(multipartFile.getOriginalFilename());
+        String filename = multipartFile.getName();
+        System.out.println(filename);
+        InputStream in = multipartFile.getInputStream();
+//        IOUtils.copy( );
+
+        FileUtils.copyInputStreamToFile(in,new File("C:\\Users\\jun\\Desktop\\a\\"+multipartFile.getOriginalFilename()));
+
 
         return "hello";
     }
