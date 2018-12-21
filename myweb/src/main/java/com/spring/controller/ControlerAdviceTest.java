@@ -16,5 +16,18 @@ public class ControlerAdviceTest {
         System.out.println("全局异常。。。");
     }
 
+    @ExceptionHandler
+    public void exceptionhandler(ArithmeticException e){
+        System.out.println(e);
+        System.out.println("全局异常。。。");
+    }
+
+    @ExceptionHandler
+    public void exceptionhandler(NullPointerException e){
+        System.out.println(e);
+        System.out.println("全局异常。。。");
+    }
+
+
 
 }
