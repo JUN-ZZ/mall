@@ -131,6 +131,20 @@ public class Demo {
         return "hello";
     }
 
+//    当发生异常时，同时配置有全局异常和局部异常，局部异常会覆盖全局异常
+    @ExceptionHandler
+    public void handlerException(Exception e){
+        System.out.println(e);
+        System.out.println("发生异常。。。");
+    }
+
+    @RequestMapping("/error.action")
+    public void error(){
+        int i=6/0;
+
+    }
+
+
 
 
 }
