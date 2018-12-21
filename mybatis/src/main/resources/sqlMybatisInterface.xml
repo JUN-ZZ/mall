@@ -55,9 +55,10 @@
 
     <mappers>
 
-        <!--<mapper resource="com/mybatis/mapper/userMapper.xml" />-->
+        <!--<mapper resource="src/main/java/com/mybatis/mapper/UserMapper.xml" />-->
 
-        <package name="com.mybatis.mapper" />
+        <package  name="com.mybatis.mapper"  />
+        <!--<mapper url="com/mybatis/mapper/userMapper.xml" />-->
 
     </mappers>
 

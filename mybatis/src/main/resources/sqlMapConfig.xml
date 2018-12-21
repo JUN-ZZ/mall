@@ -44,7 +44,7 @@
 
     <mappers>
 
-        <mapper resource="userMapper.xml" />
+        <mapper resource="com/mybatis/test/userMapper.xml" />
 
     </mappers>
 

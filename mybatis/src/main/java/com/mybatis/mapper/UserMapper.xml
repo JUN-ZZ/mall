@@ -14,9 +14,7 @@
 
     <!--id为唯一值，且与接口的名字一一对应，-->
     <select id="queryUserAll" resultMap="useMap">
-
         select * from mybatis.user
-
     </select>
 
     <select id="queryUsernameByAge" resultType="java.lang.String">

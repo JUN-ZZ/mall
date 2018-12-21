@@ -27,11 +27,9 @@ public class Test2 {
         //3.创建sqlSession
         SqlSession session = factory.openSession();
 //        //4.执行操作
-//        List<User> list = session.selectList("com.mybatis.domain.UserMapper.querAll");
-//        System.out.println(Arrays.toString(list.toArray()));
         UserMapper userMapper = session.getMapper(UserMapper.class);
-//        List<User> list = userMapper.queryUserAll();
-//        System.out.println(Arrays.toString(list.toArray()));
+        List<User> list = userMapper.queryUserAll();
+        System.out.println(Arrays.toString(list.toArray()));
         String username = userMapper.queryUsernameByAge(18);
         System.out.println(username);
 
