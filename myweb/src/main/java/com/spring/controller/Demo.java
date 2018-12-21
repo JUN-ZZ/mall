@@ -138,6 +138,7 @@ public class Demo {
 //        System.out.println("发生异常。。。");
 //    }
 
+
     @RequestMapping("/error.action")
     public void error(){
         int i=6/0;
@@ -146,9 +147,8 @@ public class Demo {
 
     @RequestMapping("/error1.action")
     public void error1(){
-
         String s = null;
-        System.out.println(s);
+        System.out.println(s.length());
 
     }
 
