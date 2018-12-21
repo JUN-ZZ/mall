@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--利用接口和配置文件进行配置-->
+<!--namespace对应接口的接口名-->
+<mapper namespace="com.mybatis.mapper.UserMapper">
+
+    <!--自定义返回的类型，id为唯一值，type为返回值的类型，与数据库的表字段一一对应-->
+    <resultMap id="useMap" type="com.mybatis.domain.User" >
+        <id property="id" column="id" javaType="java.lang.Integer"></id>
+        <result property="name" column="name" javaType="java.lang.String"></result>
+        <result property="age" column="age" javaType="java.lang.Integer"></result>
+    </resultMap>
+
+    <!--id为唯一值，且与接口的名字一一对应，-->
+    <select id="queryUserAll" resultMap="useMap">
+
+        select * from mybatis.user
+
+    </select>
+
+    <select id="queryUsernameByAge" resultType="java.lang.String">
+        select name from mybatis.user where age=#{age}
+    </select>
+
+
+
+</mapper>
