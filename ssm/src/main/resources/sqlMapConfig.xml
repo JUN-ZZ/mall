@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+       <!--&lt;!&ndash; 引入外部配置文件 &ndash;&gt;-->
+    <!--<properties resource="mysql.properties"></properties>-->
+    <!-- 配置全局属性 -->
+    <settings>
+        <!-- 使用jdbc的getGeneratedKeys获取数据库自增主键值 -->
+        <!-- Globally enables or disables any caches configured in any mapper under this configuration -->
+        <setting name="cacheEnabled" value="false"/>
+
+        <!-- Sets the number of seconds the driver will wait for a response from the database -->
+        <setting name="defaultStatementTimeout" value="5"/>
+        <!-- 开启驼峰命名转换:Table{create_time} -> Entity{createTime} -->
+        <!-- Enables automatic mapping from classic database column names A_COLUMN to camel case classic Java property names aColumn -->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <!-- Allows JDBC support for generated keys. A compatible driver is required.
+        This setting forces generated keys to be used if set to true,
+         as some drivers deny compatibility but still work -->
+        <setting name="useGeneratedKeys" value="true"/>
+    </settings>
+
+    <!-- Continue editing here -->
+
+    <!--&lt;!&ndash;配置mybatis的环境&ndash;&gt;-->
+    <!--<environments default="mysql">-->
+
+
+        <!--<environment id="mysql">-->
+            <!--&lt;!&ndash;配置事务管理器,type=jdbc代表使用jdbc的提交和回滚&ndash;&gt;-->
+            <!--<transactionManager type="JDBC"></transactionManager>-->
+            <!--&lt;!&ndash; mybatis提供了3种数据源类型，分别是：POOLED,UNPOOLED,JNDI &ndash;&gt;-->
+            <!--&lt;!&ndash; POOLED 表示支持JDBC数据源连接池 &ndash;&gt;-->
+            <!--&lt;!&ndash; UNPOOLED 表示不支持数据源连接池 &ndash;&gt;-->
+            <!--&lt;!&ndash; JNDI 表示支持外部数据源连接池 &ndash;&gt;-->
+            <!--<dataSource type="POOLED">-->
+                <!--<property name="driver" value="${jdbc.driver}" />-->
+                <!--<property name="url" value="${jdbc.url}" />-->
+                <!--<property name="username" value="${jdbc.username}" />-->
+                <!--<property name="password" value="${jdbc.password}" />-->
+            <!--</dataSource>-->
+        <!--</environment>-->
+
+
+    <!--</environments>-->
+
+    <!--<mappers>-->
+
+        <!--<mapper resource="com/mybatis/test/userMapper.xml" />-->
+
+    <!--</mappers>-->
+
+
+</configuration>
