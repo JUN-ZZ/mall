@@ -3,7 +3,7 @@
 <configuration>
 
        <!--&lt;!&ndash; 引入外部配置文件 &ndash;&gt;-->
-    <!--<properties resource="mysql.properties"></properties>-->
+    <!--<properties resource="jdbc.properties"></properties>-->
     <!-- 配置全局属性 -->
     <settings>
         <!-- 使用jdbc的getGeneratedKeys获取数据库自增主键值 -->

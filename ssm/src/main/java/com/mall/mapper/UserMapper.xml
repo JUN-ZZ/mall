@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--利用接口和配置文件进行配置-->
+<!--namespace对应接口的接口名-->
+<mapper namespace="com.mall.dao.UserMapper">
+
+    <!--<resultMap id="usermap" type="c">-->
+
+    <!--</resultMap>-->
+
+    <!--<select id="queryUserAll" resultMap="usermap" >-->
+        <!---->
+        <!---->
+    <!--</select>-->
+
+    <select id="queryUsernameByUid" resultType="java.lang.String" >
+        select user.name from mybatis.user where id=1
+    </select>
+    <!--<select id="queryIdByUsername" resultType="java.lang.Integer"></select>-->
+    <!--<select id="queryUserAll" resultType="com.mall.model.User"></select>-->
+
+
+</mapper>
